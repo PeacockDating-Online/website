@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Peacock Dating — Men share, women choose</title>
+  <meta name="description" content="Peacock Dating: a modern courtship meetup where men share on camera and women listen anonymously. Connections happen only on a mutual yes." />
+  <meta name="theme-color" content="#7c3aed" />
+  <link rel="icon" href="data:,">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Peacock Dating — Men share, women choose" />
+  <meta property="og:description" content="Men share stories on camera. Women listen anonymously. Matches only with a mutual yes." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1200&auto=format&fit=crop" />
+
+  <!-- Tailwind (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#1f2937',
+            paper: '#faf7f5',
+            peacock: '#7c3aed',     // primary
+            peach: '#f59e0b',       // accent
+            sky: '#06b6d4',         // secondary
+          },
+          boxShadow: {
+            soft: '0 12px 30px rgba(0,0,0,.08)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .container{max-width:1100px}
+    .bg-hero{
+      background-image:
+        linear-gradient(to bottom right, rgba(124,58,237,.45), rgba(6,182,212,.35)),
+        url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1600&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+    }
+    .grain{
+      background-image: radial-gradient(rgba(0,0,0,.04) 1px, transparent 1px);
+      background-size: 6px 6px;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body class="bg-paper text-ink selection:bg-peach selection:text-white">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-black/5">
+    <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#top" class="font-extrabold tracking-tight text-lg md:text-xl">
+        Peacock <span class="text-peacock">Dating</span> 🦚
+      </a>
+      <nav class="hidden md:flex items-center gap-5 text-sm">
+        <a class="hover:text-peacock" href="#about">About</a>
+        <a class="hover:text-peacock" href="#how">How it works</a>
+        <a class="hover:text-peacock" href="#roles">Roles</a>
+        <a class="hover:text-peacock" href="#rules">Rules</a>
+        <a class="hover:text-peacock" href="#faq">FAQ</a>
+        <a href="MEETUP_URL" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-peacock text-white hover:brightness-110">
+          Join on Meetup ↗
+        </a>
+      </nav>
+      <button id="menuBtn" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-black/10" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">
+        <svg id="menuIcon" class="w-5 h-5" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <!-- Mobile Nav -->
+    <nav id="mobileNav" class="hidden md:hidden border-t border-black/5">
+      <div class="container mx-auto px-4 py-3 grid gap-3 text-base">
+        <a class="py-2" href="#about">About</a>
+        <a class="py-2" href="#how">How it works</a>
+        <a class="py-2" href="#roles">Roles</a>
+        <a class="py-2" href="#rules">Rules</a>
+        <a class="py-2" href="#faq">FAQ</a>
+        <a class="py-2 inline-flex items-center gap-2" href="MEETUP_URL" target="_blank" rel="noreferrer">Join on Meetup ↗</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="top" class="relative overflow-hidden">
+    <div class="bg-hero">
+      <div class="container mx-auto px-4 py-16 md:py-24 text-white">
+        <div class="max-w-3xl drop-shadow-[0_1px_0_rgba(0,0,0,.25)]">
+          <p class="inline-flex items-center gap-2 text-[11px] md:text-xs uppercase tracking-widest bg-white/20 rounded-full px-3 py-1">
+            <span class="w-2 h-2 rounded-full bg-peach"></span> Men share • Women choose • Mutual consent only
+          </p>
+          <h1 class="text-3xl md:text-5xl font-extrabold leading-tight mt-4">
+            Men show their colors. Women choose in private.
+          </h1>
+          <p class="mt-3 md:mt-4 text-base md:text-xl">
+            A respectful, host-guided online meetup for honest stories, hobbies, and real connection.
+          </p>
+          <div class="mt-6 md:mt-8 flex flex-col sm:flex-row gap-3">
+            <a href="MEETUP_URL" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center rounded-xl px-5 py-3 bg-peacock text-white shadow-soft hover:brightness-110">Join on Meetup</a>
+            <a href="#how" class="inline-flex items-center justify-center rounded-xl px-5 py-3 border border-white/50 bg-white/10 hover:bg-white/20">How it works</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="bg-white">
+    <div class="container mx-auto px-4 py-12 md:py-16">
+      <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
+        <div>
+          <h2 class="text-2xl md:text-3xl font-semibold">What is Peacock Dating?</h2>
+          <p class="mt-3 text-ink/80">
+            A modern courtship format: <strong>men</strong> speak on camera about who they are, what they value, their experiences, and what lights them up. <strong>Women</strong> can listen anonymously, no camera required, and choose privately who to connect with afterward. Matches are only shared on a <strong>mutual “yes.”</strong>
+          </p>
+          <div class="mt-4 p-4 rounded-xl grain bg-paper border border-black/10 text-sm">
+            <strong>Welcome message:</strong> If you’re a man, be brave and share; if you’re a lady, give your support to the men who are sharing. 🦚
+          </div>
+          <div class="mt-6">
+            <a href="MEETUP_URL" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-peacock text-white hover:brightness-110">RSVP the next session ↗</a>
+          </div>
+        </div>
+        <div class="rounded-2xl overflow-hidden border border-black/10 shadow-soft">
+          <img
+            alt="Friendly online social meetup"
+            class="w-full h-64 md:h-full object-cover"
+            src="https://images.unsplash.com/photo-1520975739154-5a4c62b6b0f1?q=80&w=1600&auto=format&fit=crop">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how" class="bg-gradient-to-br from-white via-paper to-white">
+    <div class="container mx-auto px-4 py-12 md:py-16 grid md:grid-cols-2 gap-8 md:gap-12">
+      <div>
+        <h2 class="text-2xl md:text-3xl font-semibold">How it works</h2>
+        <ol class="mt-4 space-y-3 text-ink/80">
+          <li class="flex items-start gap-3"><span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-peacock text-white text-xs font-bold">1</span> RSVP on Meetup and join the online event.</li>
+          <li class="flex items-start gap-3"><span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-peacock text-white text-xs font-bold">2</span> Hosts guide short speaking rounds and light prompts.</li>
+          <li class="flex items-start gap-3"><span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-peacock text-white text-xs font-bold">3</span> Men share stories, values, hobbies, and relationship insights.</li>
+          <li class="flex items-start gap-3"><span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-peacock text-white text-xs font-bold">4</span> Women listen anonymously and note favorites.</li>
+          <li class="flex items-start gap-3"><span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-peacock text-white text-xs font-bold">5</span> After the event, women submit picks privately; only mutual “yes” = intro.</li>
+        </ol>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold">Tonight’s prompt ideas</h3>
+        <ul class="mt-3 space-y-2 text-ink/80">
+          <li>• Show & Tell: a hobby you love (share a photo).</li>
+          <li>• A relationship insight you’ve learned.</li>
+          <li>• A small ritual that makes your week better.</li>
+          <li>• A project you’re proud of or a goal this year.</li>
+        </ul>
+        <div class="mt-6 p-5 rounded-2xl bg-white border border-black/10 shadow-soft">
+          <h4 class="font-semibold">Why it works</h4>
+          <p class="mt-2 text-ink/80">Stories beat swipes. The format reduces pressure, spotlights character, and respects privacy and consent.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Roles -->
+  <section id="roles" class="bg-white">
+    <div class="container mx-auto px-4 py-12 md:py-16 grid md:grid-cols-2 gap-8 md:gap-12">
+      <!-- Men -->
+      <article class="rounded-2xl p-6 bg-paper border border-black/10">
+        <h3 class="text-xl font-semibold">For Men</h3>
+        <ul class="mt-3 space-y-2 text-ink/80">
+          <li>• Camera on for the full event.</li>
+          <li>• Be brave. Share who you are—values, hobbies, lessons learned.</li>
+          <li>• Keep it respectful and real. Timeboxed speaking rounds.</li>
+        </ul>
+      </article>
+      <!-- Women -->
+      <article class="rounded-2xl p-6 bg-paper border border-black/10">
+        <h3 class="text-xl font-semibold">For Women</h3>
+        <ul class="mt-3 space-y-2 text-ink/80">
+          <li>• Camera optional; you may remain anonymous.</li>
+          <li>• Listen comfortably; note anyone you’d like to meet.</li>
+          <li>• After the event, submit picks privately. Mutual “yes” = intro.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- Rules & Safety -->
+  <section id="rules" class="bg-white">
+    <div class="container mx-auto px-4 py-12 md:py-16">
+      <h2 class="text-2xl md:text-3xl font-semibold">Eligibility, Rules & Safety</h2>
+      <ul class="mt-4 space-y-2 text-ink/80">
+        <li>• Ages 18+ only.</li>
+        <li>• Respectful conduct; no harassment or discrimination.</li>
+        <li>• No screenshots or recordings.</li>
+        <li>• No contact details shared during the event; intros only on mutual consent.</li>
+        <li>• Hosts may remove anyone who breaks the rules.</li>
+      </ul>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a href="MEETUP_URL" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center rounded-xl px-5 py-3 bg-peacock text-white shadow-soft hover:brightness-110">RSVP on Meetup</a>
+        <a href="#faq" class="inline-flex items-center justify-center rounded-xl px-5 py-3 border border-black/10 bg-white hover:bg-paper">Read FAQ</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="bg-white">
+    <div class="container mx-auto px-4 py-12 md:py-16">
+      <h2 class="text-2xl md:text-3xl font-semibold">FAQ</h2>
+      <div class="mt-6 grid md:grid-cols-2 gap-6">
+        <div class="rounded-xl p-5 bg-paper border border-black/10">
+          <h3 class="font-semibold">Is this like a dating app?</h3>
+          <p class="mt-1 text-ink/80">No. It’s a live, host-guided social event with clear rules and mutual-consent matching only.</p>
+        </div>
+        <div class="rounded-xl p-5 bg-paper border border-black/10">
+          <h3 class="font-semibold">Do women have to show their face?</h3>
+          <p class="mt-1 text-ink/80">No. Women can attend with cameras off and remain anonymous if they prefer.</p>
+        </div>
+        <div class="rounded-xl p-5 bg-paper border border-black/10">
+          <h3 class="font-semibold">How do matches work?</h3>
+          <p class="mt-1 text-ink/80">After the event, women privately submit picks. We only introduce pairs that both say “yes.”</p>
+        </div>
+        <div class="rounded-xl p-5 bg-paper border border-black/10">
+          <h3 class="font-semibold">What should men prepare?</h3>
+          <p class="mt-1 text-ink/80">A short intro, a story, and a hobby or project you care about. Authenticity > performance.</p>
+        </div>
+      </div>
+      <div class="mt-8">
+        <a href="MEETUP_URL" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-peacock text-white hover:brightness-110">See upcoming events ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-black/10 bg-white">
+    <div class="container mx-auto px-4 py-8 text-sm text-ink/70">
+      © <span id="year"></span> Peacock Dating — Men share, women choose. • <a class="underline hover:text-ink" href="MEETUP_URL" target="_blank" rel="noreferrer">Meetup</a>
+    </div>
+  </footer>
+
+  <!-- Mobile sticky CTA -->
+  <div class="fixed bottom-0 inset-x-0 md:hidden bg-white/95 backdrop-blur border-t border-black/10 z-40">
+    <div class="container mx-auto px-4 py-3 flex gap-3">
+      <a href="MEETUP_URL" target="_blank" rel="noreferrer" class="flex-1 inline-flex items-center justify-center rounded-xl px-4 py-3 bg-peacock text-white shadow-soft">Join on Meetup</a>
+      <a href="#how" class="flex-1 inline-flex items-center justify-center rounded-xl px-4 py-3 border border-black/10 bg-white">How it works</a>
+    </div>
+  </div>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu toggle
+    const btn = document.getElementById('menuBtn');
+    const nav = document.getElementById('mobileNav');
+    const icon = document.getElementById('menuIcon');
+    btn?.addEventListener('click', () => {
+      const open = nav.classList.toggle('hidden') === false;
+      btn.setAttribute('aria-expanded', String(open));
+      icon.innerHTML = open
+        ? '<path d="M6 6l12 12M6 18L18 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>'
+        : '<path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>';
+    });
+  </script>
+</body>
+</html>
