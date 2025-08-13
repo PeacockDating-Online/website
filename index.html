@@ -23,13 +23,11 @@
           colors: {
             ink: '#1f2937',
             paper: '#faf7f5',
-            peacock: '#7c3aed',     // primary
-            peach: '#f59e0b',       // accent
-            sky: '#06b6d4',         // secondary
+            peacock: '#7c3aed',
+            peach: '#f59e0b',
+            sky: '#06b6d4',
           },
-          boxShadow: {
-            soft: '0 12px 30px rgba(0,0,0,.08)'
-          }
+          boxShadow: { soft: '0 12px 30px rgba(0,0,0,.08)' }
         }
       }
     }
@@ -40,16 +38,10 @@
       background-image:
         linear-gradient(to bottom right, rgba(124,58,237,.45), rgba(6,182,212,.35)),
         url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1600&auto=format&fit=crop');
-      background-size: cover;
-      background-position: center;
+      background-size: cover; background-position: center;
     }
-    .grain{
-      background-image: radial-gradient(rgba(0,0,0,.04) 1px, transparent 1px);
-      background-size: 6px 6px;
-    }
-    @media (prefers-reduced-motion: reduce) {
-      * { animation: none !important; transition: none !important; }
-    }
+    .grain{ background-image: radial-gradient(rgba(0,0,0,.04) 1px, transparent 1px); background-size: 6px 6px; }
+    @media (prefers-reduced-motion: reduce){ *{animation:none!important;transition:none!important} }
   </style>
 </head>
 <body class="bg-paper text-ink selection:bg-peach selection:text-white">
@@ -65,7 +57,8 @@
         <a class="hover:text-peacock" href="#roles">Roles</a>
         <a class="hover:text-peacock" href="#rules">Rules</a>
         <a class="hover:text-peacock" href="#faq">FAQ</a>
-        <a href="MEETUP_URL" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-peacock text-white hover:brightness-110">
+        <a href="https://www.meetup.com/peacock-dating/events/" target="_blank" rel="noreferrer" class="hover:text-peacock">Events</a>
+        <a href="https://www.meetup.com/peacock-dating/" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-peacock text-white hover:brightness-110">
           Join on Meetup ↗
         </a>
       </nav>
@@ -81,7 +74,8 @@
         <a class="py-2" href="#roles">Roles</a>
         <a class="py-2" href="#rules">Rules</a>
         <a class="py-2" href="#faq">FAQ</a>
-        <a class="py-2 inline-flex items-center gap-2" href="MEETUP_URL" target="_blank" rel="noreferrer">Join on Meetup ↗</a>
+        <a class="py-2" href="https://www.meetup.com/peacock-dating/events/" target="_blank" rel="noreferrer">Events ↗</a>
+        <a class="py-2 inline-flex items-center gap-2" href="https://www.meetup.com/peacock-dating/" target="_blank" rel="noreferrer">Join on Meetup ↗</a>
       </div>
     </nav>
   </header>
@@ -101,8 +95,8 @@
             A respectful, host-guided online meetup for honest stories, hobbies, and real connection.
           </p>
           <div class="mt-6 md:mt-8 flex flex-col sm:flex-row gap-3">
-            <a href="MEETUP_URL" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center rounded-xl px-5 py-3 bg-peacock text-white shadow-soft hover:brightness-110">Join on Meetup</a>
-            <a href="#how" class="inline-flex items-center justify-center rounded-xl px-5 py-3 border border-white/50 bg-white/10 hover:bg-white/20">How it works</a>
+            <a href="https://www.meetup.com/peacock-dating/" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center rounded-xl px-5 py-3 bg-peacock text-white shadow-soft hover:brightness-110">Join on Meetup</a>
+            <a href="https://www.meetup.com/peacock-dating/events/" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center rounded-xl px-5 py-3 border border-white/50 bg-white/10 hover:bg-white/20">See Events</a>
           </div>
         </div>
       </div>
@@ -116,13 +110,14 @@
         <div>
           <h2 class="text-2xl md:text-3xl font-semibold">What is Peacock Dating?</h2>
           <p class="mt-3 text-ink/80">
-            A modern courtship format: <strong>men</strong> speak on camera about who they are, what they value, their experiences, and what lights them up. <strong>Women</strong> can listen anonymously, no camera required, and choose privately who to connect with afterward. Matches are only shared on a <strong>mutual “yes.”</strong>
+            A modern courtship format: <strong>men</strong> speak on camera about who they are, what they value, their experiences, and what lights them up. <strong>Women</strong> can listen anonymously (camera optional) and choose privately who to connect with afterward. Matches are only shared on a <strong>mutual “yes.”</strong>
           </p>
           <div class="mt-4 p-4 rounded-xl grain bg-paper border border-black/10 text-sm">
-            <strong>Welcome message:</strong> If you’re a man, be brave and share; if you’re a lady, give your support to the men who are sharing. 🦚
+            <strong>Welcome:</strong> If you’re a man, be brave and share; if you’re a lady, give your support to the men who are sharing. 🦚
           </div>
-          <div class="mt-6">
-            <a href="MEETUP_URL" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-peacock text-white hover:brightness-110">RSVP the next session ↗</a>
+          <div class="mt-6 flex gap-3">
+            <a href="https://www.meetup.com/peacock-dating/" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-peacock text-white hover:brightness-110">Join Group ↗</a>
+            <a href="https://www.meetup.com/peacock-dating/events/" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-black/10 bg-white hover:bg-paper">Upcoming Events ↗</a>
           </div>
         </div>
         <div class="rounded-2xl overflow-hidden border border-black/10 shadow-soft">
@@ -167,7 +162,6 @@
   <!-- Roles -->
   <section id="roles" class="bg-white">
     <div class="container mx-auto px-4 py-12 md:py-16 grid md:grid-cols-2 gap-8 md:gap-12">
-      <!-- Men -->
       <article class="rounded-2xl p-6 bg-paper border border-black/10">
         <h3 class="text-xl font-semibold">For Men</h3>
         <ul class="mt-3 space-y-2 text-ink/80">
@@ -176,7 +170,6 @@
           <li>• Keep it respectful and real. Timeboxed speaking rounds.</li>
         </ul>
       </article>
-      <!-- Women -->
       <article class="rounded-2xl p-6 bg-paper border border-black/10">
         <h3 class="text-xl font-semibold">For Women</h3>
         <ul class="mt-3 space-y-2 text-ink/80">
@@ -200,8 +193,8 @@
         <li>• Hosts may remove anyone who breaks the rules.</li>
       </ul>
       <div class="mt-6 flex flex-wrap gap-3">
-        <a href="MEETUP_URL" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center rounded-xl px-5 py-3 bg-peacock text-white shadow-soft hover:brightness-110">RSVP on Meetup</a>
-        <a href="#faq" class="inline-flex items-center justify-center rounded-xl px-5 py-3 border border-black/10 bg-white hover:bg-paper">Read FAQ</a>
+        <a href="https://www.meetup.com/peacock-dating/" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center rounded-xl px-5 py-3 bg-peacock text-white shadow-soft hover:brightness-110">Join on Meetup</a>
+        <a href="https://www.meetup.com/peacock-dating/events/" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center rounded-xl px-5 py-3 border border-black/10 bg-white hover:bg-paper">See Events</a>
       </div>
     </div>
   </section>
@@ -228,8 +221,9 @@
           <p class="mt-1 text-ink/80">A short intro, a story, and a hobby or project you care about. Authenticity > performance.</p>
         </div>
       </div>
-      <div class="mt-8">
-        <a href="MEETUP_URL" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-peacock text-white hover:brightness-110">See upcoming events ↗</a>
+      <div class="mt-8 flex gap-3">
+        <a href="https://www.meetup.com/peacock-dating/events/" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-black/10 bg-white hover:bg-paper">Upcoming Events ↗</a>
+        <a href="https://www.meetup.com/peacock-dating/" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-peacock text-white hover:brightness-110">Join Group ↗</a>
       </div>
     </div>
   </section>
@@ -237,15 +231,17 @@
   <!-- Footer -->
   <footer class="border-t border-black/10 bg-white">
     <div class="container mx-auto px-4 py-8 text-sm text-ink/70">
-      © <span id="year"></span> Peacock Dating — Men share, women choose. • <a class="underline hover:text-ink" href="MEETUP_URL" target="_blank" rel="noreferrer">Meetup</a>
+      © <span id="year"></span> Peacock Dating — Men share, women choose. •
+      <a class="underline hover:text-ink" href="https://www.meetup.com/peacock-dating/events/" target="_blank" rel="noreferrer">Events</a> •
+      <a class="underline hover:text-ink" href="https://www.meetup.com/peacock-dating/" target="_blank" rel="noreferrer">Meetup Group</a>
     </div>
   </footer>
 
   <!-- Mobile sticky CTA -->
   <div class="fixed bottom-0 inset-x-0 md:hidden bg-white/95 backdrop-blur border-t border-black/10 z-40">
     <div class="container mx-auto px-4 py-3 flex gap-3">
-      <a href="MEETUP_URL" target="_blank" rel="noreferrer" class="flex-1 inline-flex items-center justify-center rounded-xl px-4 py-3 bg-peacock text-white shadow-soft">Join on Meetup</a>
-      <a href="#how" class="flex-1 inline-flex items-center justify-center rounded-xl px-4 py-3 border border-black/10 bg-white">How it works</a>
+      <a href="https://www.meetup.com/peacock-dating/" target="_blank" rel="noreferrer" class="flex-1 inline-flex items-center justify-center rounded-xl px-4 py-3 bg-peacock text-white shadow-soft">Join on Meetup</a>
+      <a href="https://www.meetup.com/peacock-dating/events/" target="_blank" rel="noreferrer" class="flex-1 inline-flex items-center justify-center rounded-xl px-4 py-3 border border-black/10 bg-white">See Events</a>
     </div>
   </div>
 
@@ -267,5 +263,3 @@
   </script>
 </body>
 </html>
-
-
