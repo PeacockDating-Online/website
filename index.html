@@ -6,13 +6,13 @@
   <title>Peacock Dating — Men share, women choose</title>
   <meta name="description" content="Peacock Dating: a modern courtship meetup where men share on camera and women listen anonymously. Host-led interviews, private matching on mutual yes." />
   <meta name="theme-color" content="#7c3aed" />
-  <link rel="icon" href="data:,">
+  <link rel="icon" href="peacock-logo-small.png" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Peacock Dating — Men share, women choose" />
   <meta property="og:description" content="Men share stories on camera. Women listen anonymously (camera optional) and can submit questions via chat. Matches only with a mutual yes." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1200&auto=format&fit=crop" />
+  <meta property="og:image" content="peacock-logo-small.png" />
 
   <!-- Tailwind (CDN) -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -37,7 +37,7 @@
     .bg-hero{
       background-image:
         linear-gradient(to bottom right, rgba(124,58,237,.45), rgba(6,182,212,.35)),
-        url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1600&auto=format&fit=crop');
+        url('man-wearing-tie.png'); /* custom background */
       background-size: cover; background-position: center;
     }
     .grain{ background-image: radial-gradient(rgba(0,0,0,.04) 1px, transparent 1px); background-size: 6px 6px; }
@@ -48,8 +48,9 @@
   <!-- Header -->
   <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-black/5">
     <div class="container mx-auto px-4 py-3 flex items-center justify-between">
-      <a href="#top" class="font-extrabold tracking-tight text-lg md:text-xl">
-        Peacock <span class="text-peacock">Dating</span> 🦚
+      <a href="#top" class="flex items-center gap-2 font-extrabold tracking-tight text-lg md:text-xl">
+        <img src="peacock-logo-small.png" alt="Peacock Dating Logo" class="h-8 w-8" />
+        <span>Peacock <span class="text-peacock">Dating</span></span>
       </a>
       <nav class="hidden md:flex items-center gap-5 text-sm">
         <a class="hover:text-peacock" href="#about">About</a>
@@ -57,8 +58,9 @@
         <a class="hover:text-peacock" href="#roles">Roles</a>
         <a class="hover:text-peacock" href="#rules">Rules</a>
         <a class="hover:text-peacock" href="#faq">FAQ</a>
-        <a class="hover:text-peacock" href="#ages">Ages</a> <!-- NEW -->
-        <a href="https://www.meetup.com/peacock-dating/events/" target="_blank" rel="noreferrer" class="hover:text-peacock">Events</a>
+        <a class="hover:text-peacock" href="#ages">Ages</a>
+        <a class="hover:text-peacock" href="https://www.meetup.com/peacock-dating/events/" target="_blank" rel="noreferrer">Events</a>
+        <a class="hover:text-peacock" href="https://www.facebook.com/groups/1313564493759522" target="_blank" rel="noreferrer">Facebook</a>
         <a href="https://www.meetup.com/peacock-dating/" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-peacock text-white hover:brightness-110">
           Join on Meetup ↗
         </a>
@@ -75,8 +77,9 @@
         <a class="py-2" href="#roles">Roles</a>
         <a class="py-2" href="#rules">Rules</a>
         <a class="py-2" href="#faq">FAQ</a>
-        <a class="py-2" href="#ages">Ages</a> <!-- NEW -->
+        <a class="py-2" href="#ages">Ages</a>
         <a class="py-2" href="https://www.meetup.com/peacock-dating/events/" target="_blank" rel="noreferrer">Events ↗</a>
+        <a class="py-2" href="https://www.facebook.com/groups/1313564493759522" target="_blank" rel="noreferrer">Facebook Group ↗</a>
         <a class="py-2 inline-flex items-center gap-2" href="https://www.meetup.com/peacock-dating/" target="_blank" rel="noreferrer">Join on Meetup ↗</a>
       </div>
     </nav>
@@ -94,11 +97,11 @@
             Men show their colors. Women choose in private.
           </h1>
           <p class="mt-3 md:mt-4 text-base md:text-xl">
-            <!-- UPDATED -->
             A respectful, <strong>host-guided interview</strong> where men speak on camera and women may stay in the <em>shade</em> (camera off). Women can send questions via chat for the host to ask.
           </p>
           <div class="mt-6 md:mt-8 flex flex-col sm:flex-row gap-3">
             <a href="https://www.meetup.com/peacock-dating/" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center rounded-xl px-5 py-3 bg-peacock text-white shadow-soft hover:brightness-110">Join on Meetup</a>
+            <a href="https://www.facebook.com/groups/1313564493759522" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center rounded-xl px-5 py-3 bg-sky text-white shadow-soft hover:brightness-110">Join Facebook Group</a>
             <a href="https://www.meetup.com/peacock-dating/events/" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center rounded-xl px-5 py-3 border border-white/50 bg-white/10 hover:bg-white/20">See Events</a>
           </div>
         </div>
@@ -116,7 +119,6 @@
             A modern courtship format: <strong>men</strong> speak on camera about who they are, what they value, their experiences, and what lights them up. <strong>Women</strong> can listen anonymously (camera optional) and choose privately who to connect with afterward. Matches are only shared on a <strong>mutual “yes.”</strong>
           </p>
           <div class="mt-4 p-4 rounded-xl grain bg-paper border border-black/10 text-sm">
-            <!-- UPDATED -->
             <strong>Hosted interview:</strong> A friendly host interviews each man to help him open up. The host may ask follow-ups (and a little light banter); men can decline any question.
           </div>
           <div class="mt-6 flex gap-3">
@@ -143,7 +145,7 @@
           <li class="flex items-start gap-3"><span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-peacock text-white text-xs font-bold">1</span> RSVP on Meetup and join the online event.</li>
           <li class="flex items-start gap-3"><span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-peacock text-white text-xs font-bold">2</span> The <strong>host</strong> interviews men in short rounds with light prompts.</li>
           <li class="flex items-start gap-3"><span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-peacock text-white text-xs font-bold">3</span> Men share stories, values, hobbies, and relationship insights. They may decline any question.</li>
-          <li class="flex items-start gap-3"><span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-peacock text-white text-xs font-bold">4</span> Women can stay in the <em>shade</em> (camera off), listen comfortably, and <strong>DM questions to the host</strong> to ask on their behalf.</li>
+          <li class="flex items-start gap-3"><span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-peacock text-white text-xs font-bold">4</span> Women can stay in the <em>shade</em> (camera off), listen comfortably, and <strong>DM questions to the host</strong> to ask on their behalf. <strong>If you want to ask verbally, you must enable both video and audio.</strong></li>
           <li class="flex items-start gap-3"><span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-peacock text-white text-xs font-bold">5</span> After the event, women submit picks privately; only mutual “yes” = intro.</li>
         </ol>
       </div>
@@ -171,21 +173,22 @@
         <ul class="mt-3 space-y-2 text-ink/80">
           <li>• Camera on for the full event.</li>
           <li>• Be brave. Share who you are—values, hobbies, lessons learned.</li>
-          <li>• Hosted interview format: you can decline any question.</li> <!-- UPDATED -->
-          <li>• Expect light jokes/banter from the host—stay good-humoured.</li> <!-- NEW -->
+          <li>• Hosted interview format: you can decline any question.</li>
+          <li>• Expect light jokes/banter from the host—stay good-humoured.</li>
         </ul>
       </article>
       <article class="rounded-2xl p-6 bg-paper border border-black/10">
         <h3 class="text-xl font-semibold">For Women</h3>
         <ul class="mt-3 space-y-2 text-ink/80">
-          <li>• Camera optional; you may remain anonymous (stay “in the shade”).</li> <!-- UPDATED -->
-          <li>• DM questions to the host; they’ll ask on your behalf.</li> <!-- NEW -->
+          <li>• Camera optional; you may remain anonymous (stay “in the shade”).</li>
+          <li>• DM questions to the host; they’ll ask on your behalf.</li>
+          <li>• If you want to ask a question yourself, you must turn on <strong>both video and audio</strong>.</li>
           <li>• Listen comfortably; note anyone you’d like to meet.</li>
           <li>• After the event, submit picks privately. Mutual “yes” = intro.</li>
         </ul>
       </article>
       <article class="rounded-2xl p-6 bg-paper border border-black/10">
-        <h3 class="text-xl font-semibold">For the Host</h3> <!-- NEW -->
+        <h3 class="text-xl font-semibold">For the Host</h3>
         <ul class="mt-3 space-y-2 text-ink/80">
           <li>• Keep speakers comfortable; ask follow-ups to surface personality.</li>
           <li>• Read selected questions from women (anonymous by default).</li>
@@ -202,14 +205,16 @@
       <h2 class="text-2xl md:text-3xl font-semibold">Eligibility, Rules & Safety</h2>
       <ul class="mt-4 space-y-2 text-ink/80">
         <li>• <strong>Ages 18+ only.</strong></li>
-        <li>• Respectful conduct; no harassment, discrimination, or doxxing.</li> <!-- UPDATED -->
+        <li>• Respectful conduct; no harassment, discrimination, or doxxing.</li>
         <li>• No screenshots or recordings.</li>
         <li>• No contact details shared during the event; intros only on mutual consent.</li>
-        <li>• The host may skip or rephrase questions; men may decline questions.</li> <!-- NEW -->
+        <li>• The host may skip or rephrase questions; men may decline questions.</li>
+        <li>• Spoken questions from women require <strong>both video and audio enabled</strong>; otherwise please DM the host to ask on your behalf.</li>
         <li>• Hosts may remove anyone who breaks the rules.</li>
       </ul>
       <div class="mt-6 flex flex-wrap gap-3">
         <a href="https://www.meetup.com/peacock-dating/" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center rounded-xl px-5 py-3 bg-peacock text-white shadow-soft hover:brightness-110">Join on Meetup</a>
+        <a href="https://www.facebook.com/groups/1313564493759522" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center rounded-xl px-5 py-3 bg-sky text-white shadow-soft hover:brightness-110">Join Facebook Group</a>
         <a href="https://www.meetup.com/peacock-dating/events/" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center rounded-xl px-5 py-3 border border-black/10 bg-white hover:bg-paper">See Events</a>
       </div>
     </div>
@@ -232,7 +237,9 @@
         </div>
         <div class="rounded-xl p-5 bg-paper border border-black/10">
           <h3 class="font-semibold">Participation</h3>
-          <p class="mt-2 text-ink/80">Women may attend with cameras off. If you want to ask something live, you can briefly turn your mic on—or simply DM your question to the host anytime.</p>
+          <p class="mt-2 text-ink/80">
+            Women may attend with cameras off. If you want to ask something live, you must <strong>enable both video and audio</strong> — otherwise, simply DM your question to the host anytime.
+          </p>
         </div>
       </div>
     </div>
@@ -252,11 +259,14 @@
           <p class="mt-1 text-ink/80">No. Women can attend with cameras off and remain anonymous if they prefer.</p>
         </div>
         <div class="rounded-xl p-5 bg-paper border border-black/10">
-          <h3 class="font-semibold">How can women ask questions?</h3> <!-- NEW -->
-          <p class="mt-1 text-ink/80">DM your question to the host during the event; they’ll read it to the speaker. You can also briefly unmute to ask live if you wish.</p>
+          <h3 class="font-semibold">How can women ask questions?</h3>
+          <p class="mt-1 text-ink/80">
+            DM your question to the host during the event; they’ll read it to the speaker.
+            If you want to ask directly, you must switch on <strong>both your camera and mic</strong>.
+          </p>
         </div>
         <div class="rounded-xl p-5 bg-paper border border-black/10">
-          <h3 class="font-semibold">Can men refuse a question?</h3> <!-- NEW -->
+          <h3 class="font-semibold">Can men refuse a question?</h3>
           <p class="mt-1 text-ink/80">Yes. Men may decline any question. The host keeps things respectful and light, including gentle jokes.</p>
         </div>
         <div class="rounded-xl p-5 bg-paper border border-black/10">
@@ -280,15 +290,17 @@
     <div class="container mx-auto px-4 py-8 text-sm text-ink/70">
       © <span id="year"></span> Peacock Dating — Men share, women choose. •
       <a class="underline hover:text-ink" href="https://www.meetup.com/peacock-dating/events/" target="_blank" rel="noreferrer">Events</a> •
-      <a class="underline hover:text-ink" href="https://www.meetup.com/peacock-dating/" target="_blank" rel="noreferrer">Meetup Group</a>
+      <a class="underline hover:text-ink" href="https://www.meetup.com/peacock-dating/" target="_blank" rel="noreferrer">Meetup Group</a> •
+      <a class="underline hover:text-ink" href="https://www.facebook.com/groups/1313564493759522" target="_blank" rel="noreferrer">Facebook Group</a>
     </div>
   </footer>
 
   <!-- Mobile sticky CTA -->
   <div class="fixed bottom-0 inset-x-0 md:hidden bg-white/95 backdrop-blur border-t border-black/10 z-40">
     <div class="container mx-auto px-4 py-3 flex gap-3">
-      <a href="https://www.meetup.com/peacock-dating/" target="_blank" rel="noreferrer" class="flex-1 inline-flex items-center justify-center rounded-xl px-4 py-3 bg-peacock text-white shadow-soft">Join on Meetup</a>
-      <a href="https://www.meetup.com/peacock-dating/events/" target="_blank" rel="noreferrer" class="flex-1 inline-flex items-center justify-center rounded-xl px-4 py-3 border border-black/10 bg-white">See Events</a>
+      <a href="https://www.meetup.com/peacock-dating/" target="_blank" rel="noreferrer" class="flex-1 inline-flex items-center justify-center rounded-xl px-4 py-3 bg-peacock text-white shadow-soft">Meetup</a>
+      <a href="https://www.facebook.com/groups/1313564493759522" target="_blank" rel="noreferrer" class="flex-1 inline-flex items-center justify-center rounded-xl px-4 py-3 bg-sky text-white shadow-soft">Facebook</a>
+      <a href="https://www.meetup.com/peacock-dating/events/" target="_blank" rel="noreferrer" class="flex-1 inline-flex items-center justify-center rounded-xl px-4 py-3 border border-black/10 bg-white">Events</a>
     </div>
   </div>
 
