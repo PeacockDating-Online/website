@@ -1,0 +1,28 @@
+/* Peacock Color Utilities */
+.text-peacock-blue { color: var(--peacock-blue) !important; }
+.text-peacock-gold { color: var(--peacock-gold) !important; }
+.bg-peacock-blue { background-color: var(--peacock-blue) !important; }
+.bg-peacock-gold { background-color: var(--peacock-gold) !important; }
+.border-peacock-blue { border-color: var(--peacock-blue) !important; }
+.border-peacock-gold { border-color: var(--peacock-gold) !important; }
+
+/* Ensure button variants are styled properly */
+.btn-primary {
+  background: linear-gradient(135deg, var(--peacock-blue), #004d99);
+  color: white;
+  border: 1px solid var(--peacock-blue);
+}
+
+.btn-gold {
+  background: linear-gradient(135deg, var(--peacock-gold), #e6c200);
+  color: #1a1a1a;
+  border: 1px solid var(--peacock-gold);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--peacock-blue);
+  border: 1px solid var(--peacock-blue);
+}
+
+/* Unused default styles removed */
