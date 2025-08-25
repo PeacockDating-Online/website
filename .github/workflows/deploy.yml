@@ -23,6 +23,7 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+        working-directory: ./peacockdating
 
       - name: Build the project
         run: npm run build
