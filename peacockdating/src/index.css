@@ -15,8 +15,17 @@
   --peacock-purple: #6A0DAD;
   --peacock-gold: #FFC107;
   --peacock-green: #00B894;
+  /* Surface and text variables for consistent theming */
+  --surface-50: #FAFBFC;
+  --surface-100: #F9FAFB;
+  --surface-200: #F1F5F9;
+  --surface-300: #E2E8F0;
+  --ink-100: #F1F5F9; /* light text */
+  --ink-900: #1F2937; /* dark text */
   --peacock-teal: #20B2AA;
   --peacock-navy: #1E3A8A;
+  --ink-700: #334155; /* muted/darker text */
+  --muted: #374151;
 }
 
 /* Force light mode by default, ignore system preferences */
@@ -61,16 +70,16 @@ html, body, #root {
 body {
   margin: 0;
   padding: 0;
-  background-color: #F9FAFB;
-  color: #1F2937;
+  background-color: var(--surface-100);
+  color: var(--ink-900);
   line-height: 1.6;
   transition: background-color 0.3s ease, color 0.3s ease;
   color-scheme: light; /* Force light color scheme */
 }
 
 .dark body {
-  background-color: #00152B;
-  color: #F1F5F9;
+  background-color: var(--surface-100);
+  color: var(--ink-100);
   color-scheme: dark;
 }
 
@@ -119,6 +128,27 @@ h1, h2, h3, h4, h5, h6 {
   padding: 1.5rem;
   transition: all 0.3s ease;
   color: #1F2937 !important; /* Force dark text in light mode */
+}
+
+/* Hero-specific glass card: larger, more spacious, responsive on small screens */
+.hero-glass-card {
+  /* reuse the same glass styling but with larger sizing */
+  backdrop-filter: blur(16px);
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(0, 102, 204, 0.15);
+  box-shadow: 
+    0 20px 40px -12px rgba(0, 102, 204, 0.12),
+    0 0 0 1px rgba(255, 255, 255, 0.2);
+  border-radius: 1.5rem;
+  padding: 3rem;
+  transition: all 0.3s ease;
+  color: #1F2937 !important;
+}
+
+@media (max-width: 640px) {
+  .hero-glass-card {
+    padding: 1.5rem; /* reduce padding on small screens */
+  }
 }
 
 .dark .glass-card {
@@ -306,23 +336,67 @@ html.dark, .dark body {
 
 /* Surface background fixes */
 .bg-surface {
-  background-color: #F9FAFB;
+  background-color: var(--surface-100) !important;
+  color: var(--ink-900) !important; /* Force dark text in light mode */
 }
 
 .dark .bg-surface {
-  background-color: #1E293B !important;
+  background-color: var(--surface-200) !important;
+  color: var(--ink-100) !important; /* Force light text in dark mode */
 }
 
 /* Hero section text fixes */
 .hero-text {
-  color: #FFFFFF !important;
+  color: var(--ink-900) !important;
   text-shadow: 0 2px 4px rgba(0, 31, 63, 0.3);
 }
 
 .dark .hero-text {
-  color: #FFFFFF !important;
+  color: var(--ink-100) !important;
   text-shadow: 0 2px 4px rgba(0, 31, 63, 0.5);
 }
+
+/* Ensure hero glass card has correct dark-mode styling */
+.hero-glass-card h1,
+.hero-glass-card h2,
+.hero-glass-card p,
+.hero-glass-card span {
+  color: var(--ink-900) !important;
+}
+
+.dark .hero-glass-card h1,
+.dark .hero-glass-card h2,
+.dark .hero-glass-card p,
+.dark .hero-glass-card span {
+  color: var(--ink-100) !important;
+}
+
+.dark .hero-glass-card {
+  background: rgba(0, 21, 43, 0.85);
+  border: 1px solid rgba(96, 165, 250, 0.25);
+  box-shadow:
+    0 20px 40px -12px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(96, 165, 250, 0.15);
+  color: var(--ink-100) !important;
+}
+
+/* Themed text utility classes for consistent coloring across light/dark */
+.text-strong { color: var(--peacock-900) !important; }
+.dark .text-strong { color: var(--ink-100) !important; }
+
+.text-accent { color: var(--peacock-500) !important; }
+.dark .text-accent { color: var(--peacock-gold) !important; }
+
+.text-muted { color: var(--muted) !important; }
+.dark .text-muted { color: var(--ink-100) !important; opacity: 0.95; }
+
+.text-highlight { color: var(--peacock-gold) !important; }
+.text-purple { color: var(--peacock-purple) !important; }
+.dark .text-purple { color: var(--peacock-purple) !important; }
+
+/* Small helper to ensure links/CTAs maintain accent coloring */
+.text-accent-strong { color: var(--peacock-600) !important; }
+.dark .text-accent-strong { color: var(--peacock-gold) !important; }
 
 /* Ensure readability for glass card text (but not buttons) */
 .glass-card h1,

@@ -133,12 +133,8 @@ function FanFeather({
             loading="lazy"
           />
         </div>
-        <h3 className="text-lg font-bold mb-2 text-peacock-700 dark:text-peacock-gold">
-          {step.title}
-        </h3>
-        <p className="text-peacock-600 dark:text-peacock-100 text-sm">
-          {step.desc}
-        </p>
+        <h3 className="text-lg font-bold mb-2 text-accent">{step.title}</h3>
+        <p className="text-muted text-sm">{step.desc}</p>
       </Card>
     </div>
   );
@@ -223,7 +219,7 @@ export function HowSection() {
                       />
                     </div>
                     <h4
-                      className="text-lg font-bold mb-2 text-peacock-700 dark:text-peacock-gold"
+                      className="text-lg font-bold mb-2 text-accent"
                       style={{
                         fontFamily: "'Poppins', ui-sans-serif, sans-serif",
                       }}
@@ -231,7 +227,7 @@ export function HowSection() {
                       {step.title}
                     </h4>
                     <p
-                      className="text-peacock-600 dark:text-peacock-100 text-sm"
+                      className="text-muted text-sm"
                       style={{ lineHeight: 1.5 }}
                     >
                       {step.desc}

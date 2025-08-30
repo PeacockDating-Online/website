@@ -10,7 +10,7 @@ export function HeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="/images/peacock-feather-1213066_1280.jpg"
+          src="/images/man-wearing-tie.jpg"
           alt="Peacock feather background"
           className="w-full h-full object-cover object-center min-h-screen min-w-full"
         />
@@ -32,9 +32,9 @@ export function HeroSection() {
 
       <div className="relative z-10 w-full">
         <div className="container py-20 md:py-32">
-          <div className="max-w-4xl mx-auto text-center">
-            {/* Glass card wrapper for hero content */}
-            <div className="glass-card">
+          <div className="max-w-[76.8rem] mx-auto text-center">
+            {/* Hero-specific glass card wrapper */}
+            <div className="hero-glass-card">
               <div className="inline-flex items-center gap-2 text-xs md:text-sm uppercase tracking-widest backdrop-blur-sm rounded-full px-4 py-2 mb-6 shadow-lg bg-peacock-gold/90">
                 <img
                   src="/images/peacock-logo-small.png"
@@ -46,17 +46,13 @@ export function HeroSection() {
                 </span>
               </div>
 
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                <span className="text-peacock-900 dark:text-peacock-100">
-                  Men show their colors.
-                </span>
+              <h1 className="text-[3.6rem] md:text-[5.4rem] font-bold mb-6 leading-tight">
+                <span className="text-strong">Men show their colors.</span>
                 <br />
-                <span className="text-peacock-500 dark:text-peacock-gold">
-                  Women choose in private.
-                </span>
+                <span className="text-accent">Women choose in private.</span>
               </h1>
 
-              <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto leading-relaxed text-peacock-700 dark:text-peacock-100">
+              <p className="text-[1.5rem] md:text-[1.8rem] mb-8 max-w-3xl mx-auto leading-relaxed text-muted dark:text-muted">
                 A respectful, host-guided interview where men speak on camera
                 and women may stay in the shade. Questions via chat, mutual
                 consent only.
