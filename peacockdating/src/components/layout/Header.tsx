@@ -8,7 +8,7 @@ export function Header() {
   const { dark, toggle } = useDarkMode();
   const [open, setOpen] = useState(false);
   return (
-    <header className="sticky top-0 z-50 bg-peacock-100/90 dark:bg-peacock-800/95 backdrop-blur-md border-b border-peacock-200/60 dark:border-peacock-700/60">
+    <header className="sticky top-0 z-50 bg-peacock-100/90 dark:bg-peacock-900/95 backdrop-blur-md border-b border-peacock-200/60 dark:border-peacock-800/80">
       <div className="container py-3 flex items-center justify-between text-ink dark:text-peacock-100">
         <a
           href="#top"
@@ -20,11 +20,10 @@ export function Header() {
             className="h-8 w-8"
           />
           <span>
-            Peacock{" "}
-            <span
-              style={{ color: "#0066cc" }}
-              className="dark:!text-peacock-gold"
-            >
+            <span className="text-peacock-900 dark:text-peacock-gold">
+              Peacock
+            </span>{" "}
+            <span className="text-peacock-500 dark:text-peacock-gold">
               Dating
             </span>
           </span>
@@ -39,7 +38,7 @@ export function Header() {
           ].map(([href, label]) => (
             <a
               key={href}
-              className="text-ink/80 dark:text-peacock-100/90 hover:text-peacock-500 dark:hover:text-peacock-gold transition-colors"
+              className="text-peacock-700 dark:text-peacock-100 hover:text-peacock-500 dark:hover:text-peacock-gold transition-colors"
               href={href}
             >
               {label}
@@ -74,11 +73,11 @@ export function Header() {
         id="mobile-nav"
         className={
           open
-            ? "md:hidden border-t border-gray-200 dark:border-peacock-700 bg-white/95 dark:bg-peacock-900/95 backdrop-blur-md"
+            ? "md:hidden border-t border-peacock-200 dark:border-peacock-800 bg-white/95 dark:bg-peacock-900/95 backdrop-blur-md"
             : "hidden"
         }
       >
-        <div className="container py-4 grid gap-1 text-base">
+        <div className="container py-4 grid gap-1 text-base bg-white/95 dark:bg-peacock-900/95">
           {[
             ["#about", "About"],
             ["#how", "How it works"],
@@ -88,7 +87,7 @@ export function Header() {
           ].map(([href, label]) => (
             <a
               key={href}
-              className="py-2 text-ink/80 dark:text-peacock-100/90 hover:text-peacock-500 dark:hover:text-peacock-gold transition-colors"
+              className="py-2 text-peacock-700 dark:text-peacock-100 hover:text-peacock-500 dark:hover:text-peacock-gold transition-colors"
               href={href}
               onClick={() => setOpen(false)}
             >

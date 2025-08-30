@@ -171,6 +171,23 @@ a:focus-visible {
   color: #F1F5F9 !important;
 }
 
+/* Mobile nav popout: ensure the container and links are dark in .dark mode
+   (high-specificity overrides to avoid ordering/specifity issues) */
+#mobile-nav .container {
+  background-color: rgba(255,255,255,0.95);
+}
+.dark #mobile-nav,
+.dark #mobile-nav .container {
+  background-color: rgba(0,21,43,0.95) !important; /* peacock-900/95 */
+  color: #F1F5F9 !important;
+}
+.dark #mobile-nav a {
+  color: #F1F5F9 !important;
+}
+.dark #mobile-nav .pt-3 {
+  border-color: rgba(96,165,250,0.25) !important; /* peacock-like border for contrast */
+}
+
 .dark .text-gray-100 {
   color: #F1F5F9 !important;
 }

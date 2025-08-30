@@ -41,7 +41,7 @@ export function FAQSection() {
           <div className="w-16 h-1 mx-auto mb-8 bg-peacock-gold" />
         </div>
 
-        <div className="max-w-4xl mx-auto relative">
+        <div className="max-w-4xl mx-auto relative overflow-hidden">
           {/* decorative theme glows */}
           <div
             aria-hidden

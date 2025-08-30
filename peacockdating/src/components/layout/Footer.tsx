@@ -3,7 +3,10 @@ import { Button } from "../ui/Button";
 
 export function Footer() {
   return (
-    <footer className="w-full py-6 px-4 bg-peacock-50/80 dark:bg-peacock-900/90 border-t border-peacock-100 dark:border-peacock-800">
+    <footer
+      className="w-full py-6 px-4 bg-peacock-50/80 dark:bg-peacock-900/90 border-t border-peacock-100 dark:border-peacock-800 relative z-40"
+      style={{ paddingBottom: "calc(1.5rem + env(safe-area-inset-bottom))" }}
+    >
       <div className="container max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-1 md:gap-1 items-start">
         {/* Top-left: Brand (compact) */}
         <div className="flex flex-row items-center gap-3 min-w-[220px]">
@@ -24,7 +27,7 @@ export function Footer() {
         </div>
 
         {/* Top-right: Nav */}
-        <nav className="flex flex-row flex-wrap gap-x-4 gap-y-2 text-peacock-700 dark:text-peacock-100 text-sm font-medium justify-start md:justify-end">
+        <nav className="flex flex-row flex-wrap gap-x-4 gap-y-2 text-peacock-700 dark:text-peacock-100 text-[0.65625rem] font-medium justify-start md:justify-end">
           <a
             href="#about"
             className="hover:text-peacock-500 dark:hover:text-peacock-gold transition-colors"
@@ -63,8 +66,8 @@ export function Footer() {
           </a>
         </nav>
 
-        {/* Bottom-right: CTA buttons (no card, minimal spacing) */}
-        <div className="flex flex-row flex-nowrap items-center justify-start md:justify-end gap-1 -mt-3 md:-mt-4 md:col-start-2 md:row-start-2">
+        {/* Bottom-right: CTA buttons (wrap on mobile to avoid overlap) */}
+        <div className="flex flex-row flex-wrap items-center justify-start md:justify-end gap-2 mt-4 md:-mt-4 md:col-start-2 md:row-start-2">
           <Button asChild variant="primary" size="sm">
             <a href={LINKS.events} target="_blank" rel="noopener noreferrer">
               Events{" "}
@@ -92,7 +95,7 @@ export function Footer() {
         </div>
 
         {/* Bottom-left: Copyright */}
-        <div className="text-peacock-600 dark:text-peacock-200 text-sm md:col-start-1 md:row-start-2">
+        <div className="text-peacock-600 dark:text-peacock-200 text-sm md:col-start-1 md:row-start-2 mt-3 md:mt-0">
           &copy; {new Date().getFullYear()} Peacock Dating. All rights reserved.
         </div>
       </div>

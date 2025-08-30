@@ -46,6 +46,7 @@ export function Button({
   className,
   variant = "primary",
   size = "lg",
+  asChild, // destructure but do not pass to <button>
   ...props
 }: Props) {
   return (
