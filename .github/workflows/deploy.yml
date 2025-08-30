@@ -29,6 +29,17 @@ jobs:
         run: npm run build
         working-directory: ./peacockdating
 
+      - name: Copy CNAME into build output (if present)
+        run: |
+          if [ -f CNAME ]; then
+            echo "CNAME found in repo root — copying to build output"
+            mkdir -p ./peacockdating/dist
+            cp CNAME ./peacockdating/dist/CNAME
+          else
+            echo "CNAME not found in repo root"
+          fi
+          echo "Build output contents:" && ls -la ./peacockdating/dist || true
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
