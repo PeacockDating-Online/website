@@ -16,9 +16,9 @@ export default function Home() {
       <HowSection />
       <RolesSection />
       <RulesSection />
-      <FAQSection />
       <ShowcaseSection />
       <CTASection />
+      <FAQSection />
     </div>
   );
 }
