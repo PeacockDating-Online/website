@@ -72,12 +72,12 @@ export function AboutSection() {
           </div>
 
           {/* Right column - Better image */}
-          <div className="glass-card p-0 overflow-hidden h-80 md:h-96 bg-peacock-50 dark:bg-peacock-900 flex items-center justify-center">
-            <div className="relative w-full h-full flex items-center justify-center">
+          <div className="glass-card p-0 overflow-hidden h-80 md:h-96 bg-peacock-50 dark:bg-peacock-900">
+            <div className="w-full h-full aspect-[4/3] overflow-hidden">
               <img
                 src="/images/process_2.png"
                 alt="Host guiding a respectful interview online"
-                className="w-3/4 max-w-xs aspect-square object-contain mx-auto"
+                className="w-full h-full object-cover object-center"
                 loading="lazy"
               />
             </div>

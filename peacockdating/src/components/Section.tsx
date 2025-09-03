@@ -8,10 +8,19 @@ type Props = PropsWithChildren<{
 }>;
 
 export function Section({ id, title, className, children }: Props) {
+  const titleId = `${id}-title`;
+
   return (
-    <section id={id} className={cn("bg-white ", className)}>
+    <section
+      id={id}
+      aria-labelledby={titleId}
+      className={cn("bg-surface", className)}
+    >
       <div className="container py-12 md:py-16">
-        <h2 className="text-2xl md:text-3xl font-semibold font-heading text-ink">
+        <h2
+          id={titleId}
+          className="text-2xl md:text-3xl font-semibold font-heading text-ink"
+        >
           {title}
         </h2>
         <div

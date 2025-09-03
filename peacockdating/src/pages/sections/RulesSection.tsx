@@ -1,5 +1,4 @@
-import { Button } from "../../components/ui/Button";
-import { LINKS } from "../../utils/links";
+import { Card } from "../../components/ui/Card";
 
 export function RulesSection() {
   return (
@@ -24,8 +23,9 @@ export function RulesSection() {
           </h2>
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          <div className="glass-card border-l-4 border-peacock-500 px-6 py-6 flex flex-col">
+        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8">
+          {/* Rules Card */}
+          <Card className="glass-card border-l-4 border-peacock-500 px-6 py-6 flex flex-col">
             <div className="flex items-center gap-3 mb-6">
               <svg
                 className="w-6 h-6 text-peacock-500"
@@ -87,30 +87,67 @@ export function RulesSection() {
                 <span>Hosts may remove anyone who breaks the rules.</span>
               </li>
             </ul>
-          </div>
+          </Card>
 
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <a
-              href={LINKS.meetup}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-block"
-            >
-              <Button variant="primary" className="min-w-[160px]">
-                Join on Meetup
-              </Button>
-            </a>
-            <a
-              href={LINKS.facebook}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-block"
-            >
-              <Button variant="secondary" className="min-w-[160px]">
-                Facebook Group
-              </Button>
-            </a>
-          </div>
+          {/* Ages & Attendance Card */}
+          <Card className="glass-card border-l-4 border-peacock-green px-6 py-6 flex flex-col justify-between">
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <svg
+                  className="w-6 h-6 text-peacock-green"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                <h3 className="text-xl font-semibold text-peacock-green">
+                  Ages & Attendance
+                </h3>
+              </div>
+              <p className="text-peacock-700 dark:text-peacock-100 mb-4">
+                Open to adults <strong className="text-peacock-500">18+</strong>
+                . We welcome a wide range of life stages.
+              </p>
+              <h4 className="font-semibold text-peacock-900 dark:text-peacock-100 mb-2">
+                Recent Speaker Ages (Men)
+              </h4>
+              <ul className="space-y-2 text-peacock-700 dark:text-peacock-100 mb-4">
+                <li className="flex items-center gap-3">
+                  <span className="w-2 h-2 bg-peacock-green rounded-full flex-shrink-0"></span>
+                  26 years old — 1 participant
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="w-2 h-2 bg-peacock-green rounded-full flex-shrink-0"></span>
+                  42 years old — 1 participant
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="w-2 h-2 bg-peacock-green rounded-full flex-shrink-0"></span>
+                  43 years old — 1 participant
+                </li>
+              </ul>
+              <p className="text-sm text-peacock-600 dark:text-peacock-300 italic">
+                These are examples from recent events; actual ages vary by
+                night.
+              </p>
+            </div>
+            <div className="mt-4 p-3 bg-peacock-green/10 rounded-lg">
+              <h4 className="font-semibold text-peacock-900 dark:text-peacock-100 mb-2">
+                Participation
+              </h4>
+              <p className="text-sm text-peacock-700 dark:text-peacock-100">
+                Women may attend with cameras off. If you want to ask something
+                live, you must{" "}
+                <strong className="text-peacock-purple">
+                  enable both video and audio
+                </strong>{" "}
+                — otherwise, simply DM your question to the host anytime.
+              </p>
+            </div>
+          </Card>
         </div>
       </div>
     </section>

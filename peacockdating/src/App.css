@@ -52,18 +52,18 @@
 .dark .text-peacock-50 { color: var(--peacock-100) !important; }
 .dark .text-peacock-100 { color: var(--peacock-200) !important; }
 .dark .text-peacock-200 { color: var(--peacock-300) !important; }
-.dark .text-peacock-300 { color: var(--peacock-400) !important; }
-.dark .text-peacock-400 { color: var(--peacock-500) !important; }
-.dark .text-peacock-500 { color: var(--peacock-gold) !important; }
-.dark .text-peacock-600 { color: var(--peacock-gold) !important; }
-.dark .text-peacock-700 { color: var(--peacock-gold) !important; }
-.dark .text-peacock-800 { color: var(--peacock-gold) !important; }
-.dark .text-peacock-900 { color: var(--peacock-gold) !important; }
-.dark .text-peacock-purple { color: var(--peacock-gold) !important; }
+.dark .text-peacock-300 { color: var(--peacock-200) !important; }
+.dark .text-peacock-400 { color: var(--peacock-300) !important; }
+.dark .text-peacock-500 { color: var(--peacock-200) !important; }
+.dark .text-peacock-600 { color: var(--peacock-100) !important; }
+.dark .text-peacock-700 { color: var(--ink-100) !important; }
+.dark .text-peacock-800 { color: var(--ink-100) !important; }
+.dark .text-peacock-900 { color: var(--ink-100) !important; }
+.dark .text-peacock-purple { color: var(--peacock-purple) !important; }
 .dark .text-peacock-gold { color: var(--peacock-gold) !important; }
 .dark .text-peacock-green { color: var(--peacock-green) !important; }
 .dark .text-peacock-teal { color: var(--peacock-teal) !important; }
-.dark .text-peacock-navy { color: var(--peacock-gold) !important; }
+.dark .text-peacock-navy { color: var(--peacock-300) !important; }
 
 /* Ensure button variants are styled properly */
 .btn-primary {

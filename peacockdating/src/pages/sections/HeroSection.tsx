@@ -12,7 +12,7 @@ export function HeroSection() {
         <img
           src="/images/man-wearing-tie.jpg"
           alt="Peacock feather background"
-          className="w-full h-full object-cover object-center min-h-screen min-w-full"
+          className="w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-peacock-800/90 via-peacock-purple/70 to-peacock-700/90" />
       </div>
