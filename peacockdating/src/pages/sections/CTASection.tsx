@@ -1,6 +1,6 @@
 import { Button } from "../../components/ui/Button";
 import { LINKS } from "../../utils/links";
-import { Heart, Users, Calendar, MapPin } from "lucide-react";
+import { Heart, Users, MapPin } from "lucide-react";
 
 export function CTASection() {
   // Stats pulled from Meetup events - update these with real numbers

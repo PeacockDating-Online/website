@@ -1,6 +1,5 @@
 import { Card } from "../../components/ui/Card";
-import { Button } from "../../components/ui/Button";
-import { LINKS } from "../../utils/links";
+
 import {
   Video,
   MicOff,
