@@ -1,6 +1,7 @@
 import { Button } from "../../components/ui/Button";
-import { LINKS } from "../../utils/links";
 import { Heart, Users, MapPin } from "lucide-react";
+import { LINKS } from "../../utils/links";
+import { trackDatingEvents } from "../../analytics";
 
 export function CTASection() {
   // Stats pulled from Meetup events - update these with real numbers
@@ -91,6 +92,7 @@ export function CTASection() {
                   target="_blank"
                   rel="noreferrer"
                   className="flex-1"
+                  onClick={() => trackDatingEvents.meetupClicked()}
                 >
                   <Button variant="primary" size="md" className="w-full">
                     Join on Meetup
@@ -101,6 +103,7 @@ export function CTASection() {
                   target="_blank"
                   rel="noreferrer"
                   className="flex-1"
+                  onClick={() => trackDatingEvents.ctaClicked("vote_for_times")}
                 >
                   <Button variant="secondary" size="md" className="w-full">
                     Vote for times

@@ -9,5 +9,19 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
+    sourcemap: false, // Disable sourcemaps in production for better performance
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          router: ['react-router-dom'],
+          analytics: ['react-ga4'],
+        },
+      },
+    },
+  },
+  // SEO-friendly configuration
+  define: {
+    __APP_VERSION__: JSON.stringify(process.env.npm_package_version),
   },
 })

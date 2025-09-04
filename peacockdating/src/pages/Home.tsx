@@ -7,7 +7,7 @@ import { RulesSection } from "./sections/RulesSection";
 import { FAQSection } from "./sections/FAQSection";
 import { ShowcaseSection } from "./sections/ShowcaseSection";
 import { CTASection } from "./sections/CTASection";
-import { SEO } from "../components/ui/SEO";
+import { SEO } from "../components/ui/SEOHelmet";
 
 export default function Home() {
   return (

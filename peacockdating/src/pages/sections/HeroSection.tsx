@@ -1,5 +1,6 @@
 import { Button } from "../../components/ui/Button";
 import { LINKS } from "../../utils/links";
+import { trackDatingEvents } from "../../analytics";
 
 export function HeroSection() {
   return (
@@ -64,6 +65,7 @@ export function HeroSection() {
                   target="_blank"
                   rel="noreferrer"
                   className="inline-block"
+                  onClick={() => trackDatingEvents.meetupClicked()}
                 >
                   <Button
                     variant="gold"
@@ -78,6 +80,7 @@ export function HeroSection() {
                   target="_blank"
                   rel="noreferrer"
                   className="inline-block"
+                  onClick={() => trackDatingEvents.facebookClicked()}
                 >
                   <Button
                     variant="secondary"

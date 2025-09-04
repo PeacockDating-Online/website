@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 
 interface SEOProps {
   title?: string;
@@ -17,7 +17,7 @@ const defaultSEO = {
   description:
     "Peacock Dating: a modern courtship meetup where men share on camera and women listen anonymously. Host-led interviews, private matching on mutual yes.",
   keywords:
-    "dating, meetup, courtship, singles, relationships, matching, video dating, events",
+    "dating, meetup, courtship, singles, relationships, matching, video dating, events, peacock dating, modern dating",
   image: "/images/peacock-logo-small.png",
   url: "https://peacockdating.online",
   type: "website" as const,
@@ -52,30 +52,13 @@ export const SEO: React.FC<SEOProps> = ({
       url: `${seoUrl}${seoImage}`,
     },
     sameAs: [
-      // Add your social media URLs here
-      "https://instagram.com/peacockdating",
-      "https://facebook.com/peacockdating",
-      "https://twitter.com/peacockdating",
+      "https://www.meetup.com/peacock-dating/",
+      "https://www.facebook.com/groups/1313564493759522",
     ],
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "Customer Service",
       availableLanguage: "English",
-    },
-  };
-
-  const eventStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "Event",
-    name: "Peacock Dating Meetup",
-    description:
-      "A modern courtship meetup where men share stories on camera and women listen anonymously",
-    eventStatus: "https://schema.org/EventScheduled",
-    eventAttendanceMode: "https://schema.org/MixedEventAttendanceMode",
-    organizer: {
-      "@type": "Organization",
-      name: "Peacock Dating",
-      url: seoUrl,
     },
   };
 
@@ -86,9 +69,13 @@ export const SEO: React.FC<SEOProps> = ({
       <meta name="description" content={seoDescription} />
       <meta name="keywords" content={seoKeywords} />
       <meta name="author" content={author || "Peacock Dating"} />
+      <meta
+        name="robots"
+        content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+      />
       <link rel="canonical" href={seoUrl} />
 
-      {/* Open Graph Meta Tags */}
+      {/* Open Graph Meta Tags for Social Sharing */}
       <meta property="og:title" content={seoTitle} />
       <meta property="og:description" content={seoDescription} />
       <meta property="og:image" content={`${seoUrl}${seoImage}`} />
@@ -103,7 +90,6 @@ export const SEO: React.FC<SEOProps> = ({
       <meta name="twitter:description" content={seoDescription} />
       <meta name="twitter:image" content={`${seoUrl}${seoImage}`} />
       <meta name="twitter:site" content="@peacockdating" />
-      <meta name="twitter:creator" content="@peacockdating" />
 
       {/* Article Meta Tags (if applicable) */}
       {type === "article" && publishedTime && (
@@ -116,16 +102,9 @@ export const SEO: React.FC<SEOProps> = ({
         <meta property="article:author" content={author} />
       )}
 
-      {/* Mobile Meta Tags */}
+      {/* Mobile and App Meta Tags */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="format-detection" content="telephone=no" />
-
-      {/* Additional SEO Meta Tags */}
-      <meta
-        name="robots"
-        content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
-      />
-      <meta name="googlebot" content="index, follow" />
       <meta name="theme-color" content="#004D7A" />
 
       {/* Structured Data */}
@@ -133,14 +112,7 @@ export const SEO: React.FC<SEOProps> = ({
         {JSON.stringify(structuredData)}
       </script>
 
-      {/* Event Structured Data (for event pages) */}
-      {type === "website" && (
-        <script type="application/ld+json">
-          {JSON.stringify(eventStructuredData)}
-        </script>
-      )}
-
-      {/* Preconnect to external domains */}
+      {/* Preconnect to external domains for performance */}
       <link rel="preconnect" href="https://www.google-analytics.com" />
       <link rel="preconnect" href="https://www.googletagmanager.com" />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -148,14 +120,6 @@ export const SEO: React.FC<SEOProps> = ({
         rel="preconnect"
         href="https://fonts.gstatic.com"
         crossOrigin="anonymous"
-      />
-
-      {/* Favicon and App Icons */}
-      <link rel="icon" type="image/png" href="/images/peacock-logo-small.png" />
-      <link rel="apple-touch-icon" href="/images/peacock-logo-small.png" />
-      <meta
-        name="msapplication-TileImage"
-        content="/images/peacock-logo-small.png"
       />
     </Helmet>
   );
