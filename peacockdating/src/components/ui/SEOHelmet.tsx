@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+import { useEffect } from "react";
 
 interface SEOProps {
   title?: string;
@@ -62,65 +62,134 @@ export const SEO: React.FC<SEOProps> = ({
     },
   };
 
-  return (
-    <Helmet>
-      {/* Basic Meta Tags */}
-      <title>{seoTitle}</title>
-      <meta name="description" content={seoDescription} />
-      <meta name="keywords" content={seoKeywords} />
-      <meta name="author" content={author || "Peacock Dating"} />
-      <meta
-        name="robots"
-        content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
-      />
-      <link rel="canonical" href={seoUrl} />
+  useEffect(() => {
+    // Update document title
+    document.title = seoTitle;
 
-      {/* Open Graph Meta Tags for Social Sharing */}
-      <meta property="og:title" content={seoTitle} />
-      <meta property="og:description" content={seoDescription} />
-      <meta property="og:image" content={`${seoUrl}${seoImage}`} />
-      <meta property="og:url" content={seoUrl} />
-      <meta property="og:type" content={type} />
-      <meta property="og:site_name" content="Peacock Dating" />
-      <meta property="og:locale" content="en_US" />
+    // Function to set or update meta tag
+    const setMetaTag = (name: string, content: string, property?: boolean) => {
+      const selector = property
+        ? `meta[property="${name}"]`
+        : `meta[name="${name}"]`;
+      let element = document.querySelector(selector) as HTMLMetaElement;
 
-      {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={seoTitle} />
-      <meta name="twitter:description" content={seoDescription} />
-      <meta name="twitter:image" content={`${seoUrl}${seoImage}`} />
-      <meta name="twitter:site" content="@peacockdating" />
+      if (!element) {
+        element = document.createElement("meta");
+        if (property) {
+          element.setAttribute("property", name);
+        } else {
+          element.setAttribute("name", name);
+        }
+        document.head.appendChild(element);
+      }
+      element.setAttribute("content", content);
+    };
 
-      {/* Article Meta Tags (if applicable) */}
-      {type === "article" && publishedTime && (
-        <meta property="article:published_time" content={publishedTime} />
-      )}
-      {type === "article" && modifiedTime && (
-        <meta property="article:modified_time" content={modifiedTime} />
-      )}
-      {type === "article" && author && (
-        <meta property="article:author" content={author} />
-      )}
+    // Function to set link tag
+    const setLinkTag = (rel: string, href: string) => {
+      let element = document.querySelector(
+        `link[rel="${rel}"]`
+      ) as HTMLLinkElement;
 
-      {/* Mobile and App Meta Tags */}
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="format-detection" content="telephone=no" />
-      <meta name="theme-color" content="#004D7A" />
+      if (!element) {
+        element = document.createElement("link");
+        element.setAttribute("rel", rel);
+        document.head.appendChild(element);
+      }
+      element.setAttribute("href", href);
+    };
 
-      {/* Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify(structuredData)}
-      </script>
+    // Basic Meta Tags
+    setMetaTag("description", seoDescription);
+    setMetaTag("keywords", seoKeywords);
+    setMetaTag("author", author || "Peacock Dating");
+    setMetaTag(
+      "robots",
+      "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    );
 
-      {/* Preconnect to external domains for performance */}
-      <link rel="preconnect" href="https://www.google-analytics.com" />
-      <link rel="preconnect" href="https://www.googletagmanager.com" />
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossOrigin="anonymous"
-      />
-    </Helmet>
-  );
+    // Open Graph Meta Tags
+    setMetaTag("og:title", seoTitle, true);
+    setMetaTag("og:description", seoDescription, true);
+    setMetaTag("og:image", `${seoUrl}${seoImage}`, true);
+    setMetaTag("og:url", seoUrl, true);
+    setMetaTag("og:type", type, true);
+    setMetaTag("og:site_name", "Peacock Dating", true);
+    setMetaTag("og:locale", "en_US", true);
+
+    // Twitter Card Meta Tags
+    setMetaTag("twitter:card", "summary_large_image");
+    setMetaTag("twitter:title", seoTitle);
+    setMetaTag("twitter:description", seoDescription);
+    setMetaTag("twitter:image", `${seoUrl}${seoImage}`);
+    setMetaTag("twitter:site", "@peacockdating");
+
+    // Article Meta Tags (if applicable)
+    if (type === "article" && publishedTime) {
+      setMetaTag("article:published_time", publishedTime, true);
+    }
+    if (type === "article" && modifiedTime) {
+      setMetaTag("article:modified_time", modifiedTime, true);
+    }
+    if (type === "article" && author) {
+      setMetaTag("article:author", author, true);
+    }
+
+    // Mobile and App Meta Tags
+    setMetaTag("viewport", "width=device-width, initial-scale=1.0");
+    setMetaTag("format-detection", "telephone=no");
+    setMetaTag("theme-color", "#004D7A");
+
+    // Canonical URL
+    setLinkTag("canonical", seoUrl);
+
+    // Structured Data
+    let structuredDataScript = document.querySelector(
+      "#structured-data"
+    ) as HTMLScriptElement;
+    if (!structuredDataScript) {
+      structuredDataScript = document.createElement("script");
+      structuredDataScript.id = "structured-data";
+      structuredDataScript.type = "application/ld+json";
+      document.head.appendChild(structuredDataScript);
+    }
+    structuredDataScript.textContent = JSON.stringify(structuredData);
+
+    // Preconnect links
+    const preconnectUrls = [
+      "https://www.google-analytics.com",
+      "https://www.googletagmanager.com",
+      "https://fonts.googleapis.com",
+      "https://fonts.gstatic.com",
+    ];
+
+    preconnectUrls.forEach((url) => {
+      let linkElement = document.querySelector(
+        `link[href="${url}"]`
+      ) as HTMLLinkElement;
+      if (!linkElement) {
+        linkElement = document.createElement("link");
+        linkElement.setAttribute("rel", "preconnect");
+        linkElement.setAttribute("href", url);
+        if (url.includes("gstatic")) {
+          linkElement.setAttribute("crossorigin", "anonymous");
+        }
+        document.head.appendChild(linkElement);
+      }
+    });
+  }, [
+    seoTitle,
+    seoDescription,
+    seoKeywords,
+    seoImage,
+    seoUrl,
+    type,
+    author,
+    publishedTime,
+    modifiedTime,
+    structuredData,
+  ]);
+
+  // This component doesn't render anything
+  return null;
 };
