@@ -1,11 +1,7 @@
 /** @type {import('tailwindcss').Config} */
-import typography from '@tailwindcss/typography'
-import forms from '@tailwindcss/forms'
-import aspectRatio from '@tailwindcss/aspect-ratio'
-
 export default {
   darkMode: 'class',
-  content: ['./index.html', './src/**/*.{ts,tsx}'],
+  content: ['./static/**/*.html','./static/**/*.js'],
   theme: {
     extend: {
       colors: {
@@ -72,5 +68,5 @@ export default {
       },
     },
   },
-  plugins: [typography, forms, aspectRatio],
+  plugins: [],
 }

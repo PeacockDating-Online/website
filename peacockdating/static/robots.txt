@@ -1,0 +1,5 @@
+# robots.txt for https://peacockdating.online/
+User-agent: *
+Allow: /
+
+Sitemap: https://peacockdating.online/sitemap.xml
