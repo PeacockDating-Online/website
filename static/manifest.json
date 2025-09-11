@@ -1,0 +1,15 @@
+{
+  "name": "Peacock Dating",
+  "short_name": "Peacock",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0b2743",
+  "icons": [
+    {
+      "src": "images/peacock-logo-small.png",
+      "sizes": "64x64 96x96 128x128 256x256",
+      "type": "image/png"
+    }
+  ]
+}

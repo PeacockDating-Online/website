@@ -12,13 +12,14 @@ mkdirSync(to, { recursive: true });
 cpSync(from, to, { recursive: true });
 console.log('Copied images to static/images');
 
-// Copy CNAME if present (custom domain for gh-pages)
-const cnameSrc = join(process.cwd(), 'CNAME');
-if (existsSync(cnameSrc)) {
-  try {
-    copyFileSync(cnameSrc, join(process.cwd(), 'static', 'CNAME'));
-    console.log('CNAME copied to static/');
-  } catch (e) {
-    console.warn('CNAME copy failed:', e.message);
+// Also copy root CNAME if present one directory up (for gh-pages custom domain persistence)
+try {
+  const rootCname = join(process.cwd(), '..', 'CNAME');
+  const target = join(process.cwd(), 'static', 'CNAME');
+  if (existsSync(rootCname)) {
+    copyFileSync(rootCname, target);
+    console.log('Copied CNAME into static/ for deployment');
   }
+} catch (e) {
+  console.warn('CNAME copy skipped:', e.message);
 }

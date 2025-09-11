@@ -3,12 +3,17 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PeacockDating-Online/website.git"
+  },
   "scripts": {
-    "dev": "npx tailwindcss -i ./static/tailwind.input.css -o ./static/site.css --watch",
-    "build": "node ./scripts/copy-assets.mjs && npx tailwindcss -i ./static/tailwind.input.css -o ./static/site.css --minify",
-    "serve": "npx http-server ./static -p 5173 -c-1",
-    "start": "npm run build && npm run serve",
-    "deploy": "npm run build && gh-pages -d static"
+  "dev": "npx tailwindcss -i ./static/tailwind.input.css -o ./static/site.css --watch",
+  "build": "node ./scripts/copy-assets.mjs && npx tailwindcss -i ./static/tailwind.input.css -o ./static/site.css --minify",
+  "serve": "npx http-server ./static -p 5173 -c-1",
+  "start": "npm run build && npm run serve",
+  "predeploy": "node ./scripts/copy-assets.mjs",
+  "deploy": "npm run build && gh-pages -d static -t true"
   },
   "devDependencies": {
     "gh-pages": "^6.3.0",
