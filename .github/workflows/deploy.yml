@@ -29,6 +29,11 @@ jobs:
         run: npm ci
       - name: Build static
         run: npm run build
+      - name: Include CNAME in artifact (if present)
+        run: |
+          if [ -f CNAME ]; then
+            cp CNAME static/CNAME;
+          fi
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
