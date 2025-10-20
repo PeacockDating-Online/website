@@ -26,10 +26,10 @@
     <link rel="manifest" href="manifest.json" />
     <script
         type="application/ld+json">{ "@context":"https://schema.org", "@type":"Organization", "name":"Peacock Dating", "url":"https://peacockdating.online/", "logo":"https://peacockdating.online/images/peacock-logo-small.png", "sameAs":["https://www.meetup.com","https://facebook.com"] }</script>
-    <script>
+    <!-- <script>
         // GA4 measurement ID injected for analytics.js loader
         window.GA_MEASUREMENT_ID = 'G-PPHHL6ZEFJ';
-    </script>
+    </script> -->
     <link rel="stylesheet" href="./site.css" />
     <script defer src="./darkmode.js"></script>
     <script defer src="./charts.js"></script>
@@ -57,8 +57,8 @@
                     href="#rules">Rules</a>
                 <a class="text-peacock-700 dark:text-peacock-100 hover:text-peacock-500 dark:hover:text-peacock-gold transition-colors"
                     href="#faq">FAQ</a>
-                <a href="https://www.meetup.com" target="_blank" rel="noreferrer" class="inline-block"><button
-                        class="btn btn-primary text-sm px-3 py-2">Join Meetup</button></a>
+                <a href="https://www.meetup.com/peacock-dating/" target="_blank" rel="noreferrer"
+                    class="inline-block"><button class="btn btn-primary text-sm px-3 py-2">Join Meetup</button></a>
                 <button id="theme-toggle" class="btn btn-secondary text-sm px-3 py-2"
                     aria-label="Toggle dark mode">🌙</button>
             </nav>
@@ -171,11 +171,12 @@
     </section>
 
     <!-- How Section (condensed cards) -->
-    <section id="how"
-        class="pt-6 pb-12 md:pt-8 md:pb-12 bg-gradient-to-br from-peacock-50/40 to-peacock-100 dark:from-peacock-800/60 dark:to-peacock-900/80">
+    <section id="how" class="py-12 md:py-20 bg-surface">
         <div class="container">
-            <div class="text-center mb-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-peacock-900 dark:text-peacock-100">How It Works</h2>
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-ink mb-8 pb-3 relative">How It Works<span
+                        class="absolute left-0 right-0 bottom-0 h-px bg-peacock-gold/50"></span><span
+                        class="absolute left-0 right-0 bottom-0 h-[3px] bg-peacock-gold"></span></h2>
                 <p class="mt-2 text-base md:text-lg text-peacock-600 dark:text-peacock-200 max-w-2xl mx-auto">A simple,
                     host-led process designed to highlight character and keep women’s choices private.</p>
             </div>
@@ -536,8 +537,7 @@
             </nav>
             <div
                 class="flex flex-row flex-wrap items-center justify-start md:justify-end gap-2 mt-4 md:-mt-4 md:col-start-2 md:row-start-2">
-                <a href=https://www.meetup.com/peacock-dating/" target="_blank" rel="noopener noreferrer"
-                    class="btn btn-primary text-xs">Events ↗</a>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary text-xs">Events ↗</a>
                 <a href="https://www.meetup.com/peacock-dating/" target="_blank" rel="noopener noreferrer"
                     class="btn btn-secondary text-xs">Meetup ↗</a>
                 <a href="https://www.facebook.com/groups/1313564493759522" target="_blank" rel="noopener noreferrer"
