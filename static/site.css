@@ -671,10 +671,6 @@ video {
   margin-left: 0.75rem;
 }
 
-.mt-1{
-  margin-top: 0.25rem;
-}
-
 .mt-2{
   margin-top: 0.5rem;
 }
@@ -835,6 +831,10 @@ video {
   max-width: 72rem;
 }
 
+.max-w-\[340px\]{
+  max-width: 340px;
+}
+
 .max-w-\[76\.8rem\]{
   max-width: 76.8rem;
 }
@@ -961,6 +961,10 @@ video {
   overflow: visible;
 }
 
+.rounded-2xl{
+  border-radius: 1rem;
+}
+
 .rounded-full{
   border-radius: 9999px;
 }
@@ -1013,9 +1017,19 @@ video {
   border-color: rgb(0 77 122 / 0.3);
 }
 
+.border-peacock-gold{
+  --tw-border-opacity: 1;
+  border-color: rgb(255 193 7 / var(--tw-border-opacity));
+}
+
 .border-peacock-green{
   --tw-border-opacity: 1;
   border-color: rgb(0 184 148 / var(--tw-border-opacity));
+}
+
+.border-peacock-purple{
+  --tw-border-opacity: 1;
+  border-color: rgb(106 13 173 / var(--tw-border-opacity));
 }
 
 .bg-peacock-100\/20{
@@ -1044,6 +1058,10 @@ video {
   background-color: rgb(0 77 122 / var(--tw-bg-opacity));
 }
 
+.bg-peacock-900\/80{
+  background-color: rgb(0 21 43 / 0.8);
+}
+
 .bg-peacock-gold{
   --tw-bg-opacity: 1;
   background-color: rgb(255 193 7 / var(--tw-bg-opacity));
@@ -1063,6 +1081,11 @@ video {
 
 .bg-peacock-green\/10{
   background-color: rgb(0 184 148 / 0.1);
+}
+
+.bg-peacock-purple{
+  --tw-bg-opacity: 1;
+  background-color: rgb(106 13 173 / var(--tw-bg-opacity));
 }
 
 .bg-white{
@@ -1140,6 +1163,10 @@ video {
   --tw-gradient-to: rgb(224 242 254 / 0.3) var(--tw-gradient-to-position);
 }
 
+.to-peacock-100\/60{
+  --tw-gradient-to: rgb(224 242 254 / 0.6) var(--tw-gradient-to-position);
+}
+
 .to-peacock-50\/80{
   --tw-gradient-to: rgb(240 249 255 / 0.8) var(--tw-gradient-to-position);
 }
@@ -1172,6 +1199,10 @@ video {
 
 .p-6{
   padding: 1.5rem;
+}
+
+.p-8{
+  padding: 2rem;
 }
 
 .px-3{
@@ -1400,6 +1431,10 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.filter{
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
 .backdrop-blur-md{
   --tw-backdrop-blur: blur(12px);
   -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
@@ -1428,6 +1463,10 @@ video {
   transition-property: transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+}
+
+.duration-300{
+  transition-duration: 300ms;
 }
 
 /* Custom design tokens & overrides extracted from React project */
@@ -1765,6 +1804,10 @@ details.faq .answer {
 
 .dark\:to-peacock-800\/80:is(.dark *){
   --tw-gradient-to: rgb(0 26 53 / 0.8) var(--tw-gradient-to-position);
+}
+
+.dark\:to-peacock-800\/90:is(.dark *){
+  --tw-gradient-to: rgb(0 26 53 / 0.9) var(--tw-gradient-to-position);
 }
 
 .dark\:to-peacock-900\/50:is(.dark *){
