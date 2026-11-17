@@ -1,7 +1,7 @@
 {
   "name": "Peacock Dating",
   "short_name": "Peacock Dating",
-  "description": "A modern courtship meetup where men share on camera and women listen anonymously",
+  "description": "Sydney-only dating events around Town Hall, with men speaking live and women choosing privately",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
